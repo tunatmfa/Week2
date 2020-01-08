@@ -1,0 +1,283 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot');
+}
+@import url(//fonts.googleapis.com/css?family=Gelasio);
+
+body {
+  font-family: 'MyWebFont', Fallback, sans-serif;
+  width: 93%;
+  display: block;
+  background-color: black;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: aqua;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+h2 {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+p {
+  margin-left: 10px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+/* Grid-Floats */
+
+#grid-floats {
+  display: table;
+  float: left;
+  clear: both;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#grid-floats li {
+  background: #b163a3;
+  float: left;
+  width: 22%;
+  height: 400px;
+  margin: 10px;
+  transition: 2s;
+}
+
+#grid-floats li:hover {
+  background-color: orange;
+  width: 27%;
+  transform: rotate(360deg) scale(1.2);
+}
+
+#grid-floats li:first-child {
+  width: calc(22% * 2 + 20px);
+}
+
+#grid-floats li:first-child:hover {
+  width: calc(22% * 3 + 40px);
+}
+
+#grid-floats li:first-child img:hover {
+  transform: scale(1.2);
+}
+/* Grid-Flex */
+
+#grid-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  clear: both;
+}
+
+#grid-flex li {
+  background-color: #f7cac9;
+  float: left;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 22%;
+  height: 400px;
+  margin: 10px;
+  transition: 1s;
+}
+#grid-flex li:hover {
+  background-color: orange;
+  width: 27%;
+  transform: rotate(360deg) scale(1.2);
+}
+
+img {
+  display: block;
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+img:hover {
+  transform: scale(1.5);
+}
+
+/* Mobile Style */
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  #grid-floats {
+    display: table;
+    float: left;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #grid-floats li {
+    background-color: #79812e;
+    float: left;
+    width: 40%;
+    height: 700px;
+  }
+
+  #grid-floats li:hover {
+    background-color: aquamarine;
+    font-size: 18px;
+    width: 50%;
+    margin: auto;
+    transform: scale(1.2);
+  }
+
+  #grid-floats li:first-child {
+    width: calc(40% * 2 + 20px);
+    height: 350px;
+  }
+  #grid-floats li:first-child:hover {
+    width: calc(40% * 2 + 20px);
+    height: 350px;
+    margin-left: 5%;
+    margin-right: 10%;
+  }
+
+  /* Grid-Flex */
+
+  #grid-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+  }
+
+  #grid-flex li {
+    background-color: yellowgreen;
+    float: left;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 40%;
+    height: 700px;
+  }
+
+  #grid-flex li:hover {
+    background-color: rgb(114, 114, 204);
+    font-size: 18px;
+    width: 50%;
+    margin: auto;
+    transform: scale(1.2);
+  }
+}
+/* Tablet Style */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  #grid-floats {
+    display: table;
+    float: left;
+    clear: both;
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #grid-floats li {
+    background: #22b6c0;
+    float: left;
+    width: 28%;
+    height: 500px;
+    margin: 10px;
+  }
+
+  #grid-floats li:first-child {
+    width: calc(28% * 1.5 + 10px);
+  }
+
+  #grid-floats li:nth-child(2) {
+    width: calc(28% * 1.5 + 10px);
+  }
+
+  #grid-floats li:hover {
+    background-color: tan;
+    font-size: 18px;
+    width: 33%;
+    margin: auto;
+    transform: scale(1.1);
+  }
+
+  #grid-floats li:first-child:hover {
+    width: calc(28% * 1.5 + 10px);
+    height: 500px;
+    margin: auto;
+    transform: scale(1.1);
+  }
+
+  #grid-floats li:nth-child(2):hover {
+    width: calc(28% * 1.5 + 10px);
+    height: 500px;
+    margin: auto;
+    transform: scale(1.1);
+  }
+
+  /* Grid-Flex */
+
+  #grid-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: auto;
+    box-sizing: border-box;
+    clear: both;
+  }
+
+  #grid-flex li {
+    background-color: burlywood;
+    float: left;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 28%;
+    height: 500px;
+    margin: 10px;
+  }
+
+  #grid-flex li:hover {
+    background-color: rgb(190, 117, 20);
+    font-size: 18px;
+    width: 33%;
+    margin: auto;
+    transform: scale(1.1);
+  }
+}
